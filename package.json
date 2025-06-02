@@ -1,0 +1,18 @@
+{
+  "name": "simple-to-do-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "node --watch --env-file=.env ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Just a simple to-do app with user authentication and JWT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
