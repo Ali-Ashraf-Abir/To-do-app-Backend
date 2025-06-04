@@ -14,14 +14,18 @@ db.exec(`
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS TODOS (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id TEXT PRIMARY KEY,
     user_id INTEGER,
     title TEXT,
     date TEXT,
     description TEXT,
     completed BOOLEAN DEFAULT 0,
+    sort_order INTEGER,
     FOREIGN KEY (user_id) REFERENCES users(id)
   )
 `);
+
+
+
 
 export default db;
