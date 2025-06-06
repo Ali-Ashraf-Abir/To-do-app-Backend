@@ -25,6 +25,17 @@ db.exec(`
   )
 `);
 
+db.exec(`
+  CREATE TABLE IF NOT EXISTS todo_dashboard (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER
+    total INTEGER DEFAULT 0,
+    completed INTEGER DEFAULT 0,
+    overdue INTEGER DEFAULT 0,
+    upcoming INTEGER DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+  )
+`);
 
 
 
